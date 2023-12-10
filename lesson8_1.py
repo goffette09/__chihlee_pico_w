@@ -1,3 +1,5 @@
+#新增第29~31行
+
 # random --- 生成偽隨機數  https://docs.python.org/zh-tw/3/library/random.html
 import random
 import pyinputplus as pyip
