@@ -16,7 +16,7 @@ def callback1(t:Timer):
     print(delta)
     
     # 溫度超過20度且發送alert的時間已超過60秒才執行
-    if temperature >=20 and delta >= 60*1000: 
+    if temperature >=23.5 and delta >= 60*1000: 
         alert()
         start = time.ticks_ms()
         
