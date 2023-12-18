@@ -1,5 +1,5 @@
 import time
-from machine import Pin, Timer
+from machine import Pin
 
 led = Pin("LED", Pin.OUT)
 while True:
@@ -7,15 +7,15 @@ while True:
     for i in range(12):
         if i<3 or 7<i<11: # "S"
             led.on()
-            time.sleep(0.15)
+            time.sleep(0.2)
             led.off()
-            time.sleep(0.15)
+            time.sleep(0.2)
             i += 1
         elif 3<i<7:  #"O"
             led.on()
-            time.sleep(0.7)
+            time.sleep(0.6)
             led.off()
-            time.sleep(0.15)
+            time.sleep(0.2)
             i += 1
         elif i==3 or i==7:
             led.off()
