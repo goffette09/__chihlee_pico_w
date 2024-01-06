@@ -38,6 +38,9 @@ def alert():
     print("要爆炸了!!!")
     response = requests.get(url='https://hook.eu2.make.com/vubx782mcs9ycvz2ww8h9t9rpnqfvqvf?name=pico&date=2024-01-06-14:05&temperature=28.54')
     # 先在make設定webhook & line notify連棟和設定訊息內容
+    # 取得make個人網址(https://hook.eu2.make.com/vubx782mcs9ycvz2ww8h9t9rpnqfvqvf)後
+    # 後加?再加欲呈現的變數(以&連結)
+    # 加入name, date, temperature三個key-value pair (name=pico&date=2024-01-06-14:05&temperature=28.54)
     print(help(response))
     response.close()
     
@@ -64,4 +67,3 @@ start = time.ticks_ms() - 60*1000
 time1 =Timer()
 time1.init(period=1000, callback=callback1)
 
-# https://hook.eu2.make.com/vubx782mcs9ycvz2ww8h9t9rpnqfvqvf?name=pico&date=2024-01-06-14:05&temperature=28.54
