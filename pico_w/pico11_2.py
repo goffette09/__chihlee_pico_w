@@ -2,7 +2,7 @@
 
 import network
 import time
-from machine import WDT
+from machine import WDT,Timer
 
 def connect():
     # enable station interface and connect to WiFi access point
@@ -19,7 +19,7 @@ def connect():
         if status < 0 or status >=3:
             break
         print("等待連線")
-        time.sleep(1)
+        time.sleep(1) # 主機板暫停一秒不做事   這個迴圈共最多耗時10秒
 
 
 
@@ -33,5 +33,13 @@ def connect():
     else:
         print("成功連線")
         print(nic.ifconfig())
-    
+
+def mycallback(t:Timer):
+    print("Hello World")
+    t.deinit()  #執行一次就消滅  關掉此行則會每秒print一次
+
 connect() #呼叫fuction一次
+tim = Timer()
+tim.init(period=1000, callback=mycallback) #period=1000(毫秒) =1秒 每隔一秒做一次
+#while True:
+#    time.sleep(1) #主機板暫停一秒不做事
