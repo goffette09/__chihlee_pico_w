@@ -2,7 +2,7 @@
 from tools import connect, reconnect
 from machine import WDT,Timer,ADC,RTC  
 import urequests as requests
-
+import time
 
 def alert(t:float):
     print("要爆炸了!!!")
