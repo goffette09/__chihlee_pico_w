@@ -47,12 +47,19 @@ def alert(t:float):
     second = date_tuple[6]
     date_str = f'{year}-{month}-{day} {hour}:{minutes}:{second}'
     
+    
+    #解決 連不上網路的情況 (用 tr)
+    try:
+    
     response = requests.get(f'https://hook.eu2.make.com/vubx782mcs9ycvz2ww8h9t9rpnqfvqvf?name=pico_我家冰箱&date={date_str}&temperature={t}')
     # 先在make設定webhook & line notify連棟和設定訊息內容
     # 取得make個人網址(https://hook.eu2.make.com/vubx782mcs9ycvz2ww8h9t9rpnqfvqvf)後
     # 後加?再加欲呈現的變數(以&連結)
     # 加入name, date, temperature三個key-value pair (name=pico&date=2024-01-06-14:05&temperature=28.54)
-    print(help(response))
+    
+    except:
+        pass
+    else:
     response.close()
     
 def callback1(t:Timer):
