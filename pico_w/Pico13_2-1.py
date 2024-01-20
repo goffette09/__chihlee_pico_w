@@ -6,9 +6,9 @@ button= Pin(14, mode=Pin.PULL_DOWN) #設定GPIO14為button下拉電阻
 is_press = False  #因為一開始沒人按按鈕 
  
 while True:
-    if button.value():
+    if button.value(): # button.value()=1有按下 
         is_press = True
-    else: # 沒按下的情況
-        if is_press == True: #再度按下
-            print("release")
-            is_press = False
+    #elif is_press == True: # 沒按下的情況  再度按下
+    elif is_press: #取代上一行  簡潔
+         print("release")
+         is_press = False
