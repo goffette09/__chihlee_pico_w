@@ -4,7 +4,7 @@ import time
 from tools import connect,reconnect  #Pico有tools 程式
 import 
 
-url = 'https://blynk.cloud/external/api/batch/update?v0={light_value}&v1={vr_value}&token=gg8uB11T8EXSWdrm5XJvc6sTKM5jdMPF'
+url = f'https://blynk.cloud/external/api/batch/update?v0={light_value}&v1={vr_value}&token=gg8uB11T8EXSWdrm5XJvc6sTKM5jdMPF'
 
 def fun10(t:Timer |None = None): 
     print('10 seconds passed!')
