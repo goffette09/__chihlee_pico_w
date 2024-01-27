@@ -14,5 +14,5 @@ fun10() #fun10()後執行一遍: 一開始熄燈10秒,就亮燈
 
 while True:
     print(light.read_u16())
-    time.sleep_ms(500)
+    time.sleep_ms(500) 
  # read_u16(): read value, 0-65535 across voltage range 0.0v - 3.3v

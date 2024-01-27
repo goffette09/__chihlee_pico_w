@@ -1,10 +1,10 @@
-#加入連線功能
+#加入連線功能 (先在Blynk和Thunder Client之間連線測試)
 from machine import Timer,Pin,ADC
 import time
 from tools import connect,reconnect  #Pico有tools 程式
-import 
 
-url = f'https://blynk.cloud/external/api/batch/update?v0={light_value}&v1={vr_value}&token=gg8uB11T8EXSWdrm5XJvc6sTKM5jdMPF'
+
+url = f'https://blynk.cloud/external/api/batch/update?v0=12345&v1=54321&token=gg8uB11T8EXSWdrm5XJvc6sTKM5jdMPF'
 
 def fun10(t:Timer |None = None): 
     print('10 seconds passed!')
