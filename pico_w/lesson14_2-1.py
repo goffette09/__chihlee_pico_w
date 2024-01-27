@@ -8,7 +8,6 @@ def fun10(t:Timer |None = None):
     light_value = light.read_u16()
     vr_value = vr.read_u16()
     url = f'https://blynk.cloud/external/api/batch/update?token=gg8uB11T8EXSWdrm5XJvc6sTKM5jdMPF&v0={light_value}&v1={vr_value}'
-    
     #使用try...except架構解決連線失敗問題(失敗就重連) 
     try:
         led.value(1) #連成就亮燈
