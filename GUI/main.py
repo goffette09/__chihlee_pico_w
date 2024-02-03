@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 
-st.title('Pico_W專案')
+st.title('Pico_W專案:更新')
 st.header("雞舍:orange[溫度]和:rainbow[光線]狀態")
 st.divider()
 
