@@ -3,6 +3,10 @@ import numpy as np
 import pandas as pd
 import requests
 from streamlit_autorefresh import st_autorefresh
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 st_autorefresh(interval=5000)
 
@@ -10,7 +14,7 @@ st.title('Pico_W專案:更新')
 st.header("雞舍:orange[溫度]和:rainbow[光線]狀態")
 st.divider()
 
-url = 'https://blynk.cloud/external/api/get?token=gg8uB11T8EXSWdrm5XJvc6sTKM5jdMPF&v0&v1'
+url = f'https://blynk.cloud/external/api/get?token={os.environ["API_KEY"]}&v0&v1'
 
 response = requests.request("GET", url)
 if response.status_code == 200:
