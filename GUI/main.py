@@ -8,7 +8,7 @@ st.divider()
 
 
 df = pd.DataFrame(
-    np.random.randn(1000, 2) / [50, 50] + [23.9, 120.4],
+    np.random.randn(100, 2) / [50, 50] + [23.487614, 120.959522],
     columns=['lat', 'lon'])
 
 st.map(df)
