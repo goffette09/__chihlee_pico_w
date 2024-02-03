@@ -2,6 +2,9 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import requests
+from streamlit_autorefresh import st_autorefresh
+
+st_autorefresh(interval=5000)
 
 st.title('Pico_W專案:更新')
 st.header("雞舍:orange[溫度]和:rainbow[光線]狀態")
@@ -22,6 +25,8 @@ df = pd.DataFrame(
     columns=['lat', 'lon'])
 
 st.map(df)
+
+#st.balloons()
 
 #st.snow()
 
