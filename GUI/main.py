@@ -26,7 +26,7 @@ df = pd.DataFrame(
 
 st.map(df)
 
-#st.balloons()
+st.balloons()
 
 #st.snow()
 
